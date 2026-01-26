@@ -14,7 +14,4 @@
   "dependencies": {
     "firebase": "^12.7.0"
   }
-  "scripts": {
-    "preview": "vite preview --port 8080"
-  }
 }

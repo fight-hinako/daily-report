@@ -37,14 +37,12 @@ const db = getFirestore(app);
 
 
 
- if(document.getElementById("js-history")) {
-     fetchHistoryData(getDocs,collection,db);
+if(document.getElementById("js-history")) {
+     fetchHistoryData(getDocs, collection, db);
 }
 
 
-
-
-  if(document.getElementById("js-form")) {
+if(document.getElementById("js-form")) {
         document.getElementById("js-form").addEventListener("submit", (e) => submitData(e,addDoc,collection,db));
-  }
+}
 

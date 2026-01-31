@@ -1,13 +1,12 @@
-// Firesottoreから取得したデータを表示する
-export const fetchHistoryData = async () =>{
+// Firesotoreから取得したデータを表示する
+export const fetchHistoryData = async (getDocs, collection, db) =>{
   let tags = "";
  
-
-  // repirtsのコレクションデータの取得
+  // reportsのコレクションデータの取得
  const querySnapshot = await getDocs(collection(db,"reports"));
  
  // データをテーブルの表の形式に合わせてHTMLに挿入
- querySnapshot.forEach((doc) =>{
+ querySnapshot.forEach((doc) => {
    console.log(`${doc.id} => ${doc.data()}`);
    tags += `<tr><td>${doc.data().date}</td><td>${doc.data().name}</td><td>${doc.data().work}</td><td>${doc.data().comment}</td></tr>`
  });
